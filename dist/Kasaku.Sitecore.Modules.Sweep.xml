@@ -1,0 +1,60 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Kasaku.Sitecore.Modules.Sweep</PackageName>
+      <Author>Kasaku</Author>
+      <Version>1.0</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/system/Settings/Html Editor Profiles/Rich Text Default/Toolbar 1/Clean HTML/{F2693D13-4B74-48AC-9BC7-5442DAA56678}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/Sweep/Sweep.config</x-item>
+        <x-item>/bin/Kasaku.Sitecore.Modules.Sweep.dll</x-item>
+        <x-item>/bin/Kasaku.Sitecore.Modules.Sweep.Web.dll</x-item>
+        <x-item>/sitecore modules/sweep/service.asmx</x-item>
+        <x-item>/sitecore modules/sweep/sweep.commands.js</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms />
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

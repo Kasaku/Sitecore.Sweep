@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4114B581-9A16-4932-8A24-B45419D2048E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kasaku.Sitecore.Modules.Sweep</RootNamespace>
+    <AssemblyName>Kasaku.Sitecore.Modules.Sweep</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\libs\sitecore-8\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\SweepConfig.cs" />
+    <Compile Include="Matchers\AllRichTextMatcher.cs" />
+    <Compile Include="Matchers\ChainedMatcher.cs" />
+    <Compile Include="Matchers\TemplateIdMatcher.cs" />
+    <Compile Include="Matchers\FieldIdMatcher.cs" />
+    <Compile Include="Matchers\IMatchStrategy.cs" />
+    <Compile Include="Pipelines\Clean\CleanPipelineArgs.cs" />
+    <Compile Include="Pipelines\Clean\ConvertStrongParagraphToHeader.cs" />
+    <Compile Include="Pipelines\Clean\RemoveEmptyNodes.cs" />
+    <Compile Include="Pipelines\Clean\RemoveInnerElementsFromHeaders.cs" />
+    <Compile Include="Pipelines\Clean\RemoveNestedParagraphTags.cs" />
+    <Compile Include="Pipelines\Clean\RemoveNonbreakingSpaces.cs" />
+    <Compile Include="Pipelines\Clean\StripInlineStyles.cs" />
+    <Compile Include="Pipelines\Clean\StripInvalidClasses.cs" />
+    <Compile Include="Pipelines\Clean\SweepCleanProcessor.cs" />
+    <Compile Include="Pipelines\Clean\WrapSingleTextNode.cs" />
+    <Compile Include="Pipelines\SaveUI\CleanHtmlOnSave.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SweepClean.cs" />
+    <Compile Include="Utils\FieldItemUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
