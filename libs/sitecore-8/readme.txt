@@ -1,1 +1,1 @@
-Please Sitecore.Kernel.dll here.
+Place Sitecore.Kernel.dll here.
