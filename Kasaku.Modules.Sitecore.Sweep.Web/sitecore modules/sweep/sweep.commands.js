@@ -5,7 +5,7 @@ Telerik.Web.UI.Editor.CommandList["SweepClean"] = function (commandName, editor,
     var html = editor.get_html();
 
     jQuery.ajax({
-        method: "POST",
+        type: "POST",
         url: "/sitecore modules/sweep/service.asmx/Clean",
         contentType: "application/json",
         dataType: "json",
