@@ -28,7 +28,7 @@
       </Converter>
       <Include />
       <Exclude />
-      <Name>Item</Name>
+      <Name>Items</Name>
     </xitems>
   </Sources>
   <Converter>
