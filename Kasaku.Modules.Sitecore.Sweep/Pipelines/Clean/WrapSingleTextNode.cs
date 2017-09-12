@@ -1,4 +1,5 @@
-﻿using HtmlAgilityPack;
+﻿using System.Linq;
+using HtmlAgilityPack;
 
 namespace Kasaku.Sitecore.Modules.Sweep.Pipelines.Clean
 {
@@ -9,16 +10,14 @@ namespace Kasaku.Sitecore.Modules.Sweep.Pipelines.Clean
     {
         public override void Process(CleanPipelineArgs args)
         {
-            if (args.Document.DocumentNode.ChildNodes.Count == 1
-                 && args.Document.DocumentNode.FirstChild.NodeType == HtmlNodeType.Text)
+            if (args.Document.DocumentNode.HasChildNodes
+                 && args.Document.DocumentNode.ChildNodes.Any(node => node.NodeType == HtmlNodeType.Text))
             {
                 var newChild = HtmlNode.CreateNode("<p></p>");
-                newChild.AppendChild(args.Document.DocumentNode.FirstChild);
+                newChild.AppendChildren(args.Document.DocumentNode.ChildNodes);
 
-                args.Document.DocumentNode.ReplaceChild(
-                    newChild,
-                    args.Document.DocumentNode.FirstChild);
-
+                args.Document.DocumentNode.RemoveAllChildren();
+                args.Document.DocumentNode.AppendChild(newChild);
             }
         }
     }
