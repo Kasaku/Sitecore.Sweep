@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kasaku.Sitecore.Modules.Sweep", "Kasaku.Modules.Sitecore.Sweep\Kasaku.Sitecore.Modules.Sweep.csproj", "{4114B581-9A16-4932-8A24-B45419D2048E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kasaku.Sitecore.Modules.Sweep.Web", "Kasaku.Modules.Sitecore.Sweep.Web\Kasaku.Sitecore.Modules.Sweep.Web.csproj", "{A8DCDEA6-9E1A-4709-9411-BC27932CAFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kasaku.Modules.Sitecore.Sweep.Tests", "Kasaku.Modules.Sitecore.Sweep.Tests\Kasaku.Modules.Sitecore.Sweep.Tests.csproj", "{B2BE9D07-ABAA-4C58-8B14-5488F3B0CC9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{A8DCDEA6-9E1A-4709-9411-BC27932CAFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DCDEA6-9E1A-4709-9411-BC27932CAFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DCDEA6-9E1A-4709-9411-BC27932CAFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BE9D07-ABAA-4C58-8B14-5488F3B0CC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BE9D07-ABAA-4C58-8B14-5488F3B0CC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BE9D07-ABAA-4C58-8B14-5488F3B0CC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BE9D07-ABAA-4C58-8B14-5488F3B0CC9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83C22DF8-D35D-4C32-87E8-61B1B3A26EEA}
 	EndGlobalSection
 EndGlobal

@@ -1,1 +1,0 @@
-Please Sitecore.Kernel.dll here for Sitecore 6.6.
