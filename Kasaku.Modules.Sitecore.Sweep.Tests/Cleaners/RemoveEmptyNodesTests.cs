@@ -44,6 +44,7 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 				IgnoredElements = "p"
 			};
 
+			// Currently failing
 			tester.AssertParsedHtml(cleaner, "<p>content</p><p></p>", "<p>content</p><p></p>");
 		}
 
@@ -57,6 +58,7 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 				IgnoredElements = "p|div"
 			};
 
+			// Currently failing
 			tester.AssertParsedHtml(cleaner, "<p>content</p><div></div><p></p>", "<p>content</p><div></div><p></p>");
 		}
 	}

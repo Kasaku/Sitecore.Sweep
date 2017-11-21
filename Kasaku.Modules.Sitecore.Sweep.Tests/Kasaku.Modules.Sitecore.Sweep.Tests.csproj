@@ -54,6 +54,7 @@
     <Compile Include="Cleaners\CleanerTester.cs" />
     <Compile Include="Cleaners\RemoveInnerElementsFromHeadersTests.cs" />
     <Compile Include="Cleaners\ConvertStrongParagraphToHeaderTests.cs" />
+    <Compile Include="Cleaners\RemoveNestedParagraphTagsTests.cs" />
     <Compile Include="Cleaners\RemoveNonbreakingSpacesTests.cs" />
     <Compile Include="Cleaners\RemoveEmptyNodesTests.cs" />
     <Compile Include="Cleaners\StripInlineStylesTests.cs" />
