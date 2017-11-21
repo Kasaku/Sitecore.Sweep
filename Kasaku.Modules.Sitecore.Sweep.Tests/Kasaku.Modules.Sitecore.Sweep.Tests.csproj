@@ -52,9 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cleaners\CleanerTester.cs" />
+    <Compile Include="Cleaners\RemoveInnerElementsFromHeadersTests.cs" />
+    <Compile Include="Cleaners\ConvertStrongParagraphToHeaderTests.cs" />
     <Compile Include="Cleaners\RemoveNonbreakingSpacesTests.cs" />
+    <Compile Include="Cleaners\RemoveEmptyNodesTests.cs" />
     <Compile Include="Cleaners\StripInlineStylesTests.cs" />
     <Compile Include="Cleaners\StripInvalidClassesTests.cs" />
+    <Compile Include="Cleaners\WrapSingleTextNodeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
