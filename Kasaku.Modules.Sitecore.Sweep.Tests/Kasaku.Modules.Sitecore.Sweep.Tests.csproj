@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cleaners\CleanerTester.cs" />
+    <Compile Include="Cleaners\RemoveNonbreakingSpacesTests.cs" />
     <Compile Include="Cleaners\StripInlineStylesTests.cs" />
     <Compile Include="Cleaners\StripInvalidClassesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
