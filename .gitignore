@@ -70,3 +70,7 @@ bld/
 
 # Custom libs
 libs/**/*.dll
+
+# Docker related files
+#data/*
+#deploy/*
