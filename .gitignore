@@ -72,5 +72,5 @@ bld/
 libs/**/*.dll
 
 # Docker related files
-#data/*
-#deploy/*
+data/*
+deploy/*
