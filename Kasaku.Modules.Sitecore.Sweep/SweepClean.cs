@@ -1,6 +1,6 @@
-﻿using Kasaku.Sitecore.Modules.Sweep.Pipelines.Clean;
+﻿using HtmlAgilityPack;
+using Kasaku.Sitecore.Modules.Sweep.Pipelines.Clean;
 using Sitecore.Pipelines;
-using Sitecore.WordOCX.HtmlDocument;
 
 namespace Kasaku.Sitecore.Modules.Sweep
 {
@@ -8,7 +8,12 @@ namespace Kasaku.Sitecore.Modules.Sweep
     {
         public static string Run (string value)
         {
-            var document = new HtmlDocument();
+            var document = new HtmlDocument()
+            {
+                OptionOutputOriginalCase = true,
+                OptionWriteEmptyNodes = true
+            };
+
             document.LoadHtml(value);
 
             var pipelineArgs = new CleanPipelineArgs()

@@ -26,6 +26,14 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 			tester.AssertParsedHtml("<p></p><p>content</p><p></p>", "<p>content</p>");
 		}
 
+        [Test]
+        public void MultipleEmptyNodesWithOtherTags()
+        {
+            var tester = new CleanerTester<RemoveEmptyNodes>();
+
+            tester.AssertParsedHtml("<p></p><div>content</div><p></p>", "<div>content</div>");
+        }
+
 		[Test]
 		public void OnlyEmptyNodes()
 		{
@@ -44,8 +52,8 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 				IgnoredElements = "p"
 			};
 
-			// Currently failing
-			tester.AssertParsedHtml(cleaner, "<p>content</p><p></p>", "<p>content</p><p></p>");
+            // Note that HtmlAgilityPack will auto-shorten empty p tags to one node
+			tester.AssertParsedHtml(cleaner, "<p>content</p><p></p>", "<p>content</p><p />");
 		}
 
 		[Test]
@@ -58,8 +66,8 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 				IgnoredElements = "p|div"
 			};
 
-			// Currently failing
-			tester.AssertParsedHtml(cleaner, "<p>content</p><div></div><p></p>", "<p>content</p><div></div><p></p>");
+            // Note that HtmlAgilityPack will auto-shorten empty p tags to one node
+			tester.AssertParsedHtml(cleaner, "<p>content</p><div></div><p></p>", "<p>content</p><div></div><p />");
 		}
 	}
 }

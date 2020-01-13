@@ -13,7 +13,12 @@ namespace Kasaku.Modules.Sitecore.Sweep.Tests.Cleaners
 
 		public void AssertParsedHtml(T processor, string input, string expectedOutput)
 		{
-			var htmlDoc = new HtmlDocument();
+			var htmlDoc = new HtmlDocument()
+            {
+                OptionOutputOriginalCase = true,
+                OptionWriteEmptyNodes = true
+            };
+
 			htmlDoc.LoadHtml(input);
 
 			processor.Process(new CleanPipelineArgs() {Document = htmlDoc});
