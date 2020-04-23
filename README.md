@@ -55,7 +55,7 @@ The current release has been tested with Sitecore 6.6, 7.2, 8.2 and 9.3, and is 
 
 Sitecore 6.6 uses a different version of HtmlAgilityPack, version `1.4.0.0`. If you are building from source, you will need to account for this as the solution currently doesn't. However if you just want the build, the `dist` folder already contains a working build for Sitecore 6.6.
 
-### Sidecore 9.x
+### Sitecore 9.x
 
 Sitecore 9.0 - 9.3 also use a different version of HtmlAgilityPack, version `1.4.9.5`. You can use the regular build of Sitecore.Sweep with this version, but should include this assembly binding redirect in your `web.config`:
 
